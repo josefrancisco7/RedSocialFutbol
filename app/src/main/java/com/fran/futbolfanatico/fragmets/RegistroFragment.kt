@@ -121,7 +121,7 @@ class RegistroFragment : Fragment() {
                             "nombre_mostrado" to nombreCompleto,
                             "nombre_usuario" to nombreUsuario,
                             "nombre_usuario_lower" to nombreUsuarioMinus,
-                            "foto_url" to "https://ninyslzkbecxjgwemvke.supabase.co/storage/v1/object/public/FUTBOLFANATICO/avatars/usuario.png",
+                            "foto_url" to "***/storage/v1/object/public/***/avatars/usuario.png",
                             "biografia" to "",
                             "email" to correo,
                             "seguidores" to 0,
