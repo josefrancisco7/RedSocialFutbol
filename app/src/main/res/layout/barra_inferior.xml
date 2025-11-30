@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/green_light"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <ImageButton
+        android:id="@+id/btnInicio"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/home"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+
+        android:contentDescription="Inicio" />
+
+    <ImageButton
+        android:id="@+id/btnBuscar"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/buscar"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+
+        android:contentDescription="Buscar" />
+
+    <ImageButton
+        android:id="@+id/btnCrear"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/agregar"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+        android:contentDescription="Crear publicación" />
+
+    <ImageButton
+        android:id="@+id/btnMensajes"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/mensajes"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+
+        android:contentDescription="Mensajes" />
+
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/usuario"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+        android:contentDescription="Perfil" />
+</LinearLayout>
+

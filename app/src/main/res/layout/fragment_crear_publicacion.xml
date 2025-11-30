@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:id="@+id/crearPublicacionFragment">
+
+    <!-- Texto -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilTexto"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+    android:hint="¿Qué quieres compartir?"
+    app:counterEnabled="true"
+    app:counterMaxLength="500"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/ivPreview"
+    android:layout_margin="12dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:minLines="4"
+    android:maxLength="500"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Botón elegir imagen -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnElegirImagen"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Subir imagen"
+        android:textAllCaps="false"
+        app:iconTint="@color/black"
+        app:icon="@drawable/imagen"
+        app:iconSize="24dp"
+        app:iconGravity="textStart"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/ilTexto"
+        app:layout_constraintEnd_toEndOf="@id/ilTexto"
+        app:layout_constraintBottom_toTopOf="@id/btnPublicar"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Botón publicar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPublicar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Publicar"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/green_light"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/ilTexto"
+        app:layout_constraintEnd_toEndOf="@id/ilTexto"
+        app:layout_constraintBottom_toTopOf="@+id/includeBottomBar"/>
+
+    <!-- Preview simple de imagen (opcional) -->
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="@id/ilTexto"
+        app:layout_constraintEnd_toEndOf="@id/ilTexto"
+        app:layout_constraintTop_toBottomOf="@id/ilTexto"
+        app:layout_constraintBottom_toTopOf="@id/btnElegirImagen"/>
+
+
+    <!-- Barra inferior -->
+    <include
+        android:id="@+id/includeBottomBar"
+        layout="@layout/barra_inferior"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/green_light"
+        android:elevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

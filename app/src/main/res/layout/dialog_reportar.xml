@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Por qué reportas este contenido?"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgMotivos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbSpam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spam o contenido engañoso"/>
+
+        <RadioButton
+            android:id="@+id/rbOfensivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido ofensivo o violento"/>
+
+        <RadioButton
+            android:id="@+id/rbAcoso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acoso o bullying"/>
+
+        <RadioButton
+            android:id="@+id/rbInapropiado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido inapropiado"/>
+
+        <RadioButton
+            android:id="@+id/rbOtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otro motivo"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Detalles adicionales (opcional)"
+        android:layout_marginTop="12dp"
+        android:minLines="2"
+        android:maxLines="4"
+        android:gravity="top"/>
+
+</LinearLayout>

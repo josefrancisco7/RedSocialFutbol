@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Futbol Fanatico</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="create_user">Crear cuenta nueva</string>
+    <string name="user">Usuario</string>
+    <string name="email">Correo electronico</string>
+    <string name="forget">¿Has olvidado la contraseña?</string>
+    <string name="publications">No hay publicaciones para mostrar</string>
+
+    Eliminar cuenta
+    <!-- Nuevos para registro -->
+    <string name="register_subtitle">Regístrate para ver contenido y compartir con otros fanáticos del fútbol.</string>
+    <string name="full_name">Nombre completo</string>
+    <string name="register">Registrarte</string>
+    <string name="terms_privacy">Al registrarte, aceptas nuestras Condiciones y la Política de privacidad.</string>
+    <string name="repeat_password">Repite tu contraseña</string>
+
+    <!-- Pagina perfil -->
+    <string name="edit_profile">Editar perfil</string>
+    <string name="logout">Cerrar sesión</string>
+
+    <!-- Pagina editar perfil -->
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="change_photo">Cambiar foto de perfil</string>
+    <string name="profile_photo">Foto de perfil</string>
+    <string name="display_name">Nombre</string>
+    <string name="bio">Biografía</string>
+    <string name="delete">Eliminar cuenta</string>
+
+
+    <!-- Social login (opcional) -->
+    <string name="login_with_facebook">Iniciar sesión con Facebook</string>
+    <string name="login_with_google">Iniciar sesión con Google</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
