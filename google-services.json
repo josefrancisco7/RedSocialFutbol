@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "297637079599",
-    "project_id": "futbol-fanatico",
-    "storage_bucket": "futbol-fanatico.firebasestorage.app"
+    "project_number": "",
+    "project_id": "",
+    "storage_bucket": ""
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:297637079599:android:7b4cf41c50d253d33634da",
+        "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": "com.fran.futbolfanatico"
+          "package_name": ""
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAJ9l0YquOU-FYsI9gtG1Jmbd07Au5pNSk"
+          "current_key": ""
         }
       ],
       "services": {
