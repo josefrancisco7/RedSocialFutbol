@@ -48,9 +48,9 @@ class EditarPerfilFragment : Fragment() {
     private val db by lazy { FirebaseFirestore.getInstance() }
 
     // Variables para poder usar supabase
-    private val SUPABASE_URL = "https://ninyslzkbecxjgwemvke.supabase.co"
-    private val SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pbnlzbHprYmVjeGpnd2VtdmtlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAyMjI5ODEsImV4cCI6MjA3NTc5ODk4MX0.iIJWXT9KWFeu_2ndp1qtSp88yq7DMr9BIUHRbcl2To4"   // anon key (pública)
-    private val BUCKET = "FUTBOLFANATICO"
+    private val SUPABASE_URL = ""
+    private val SUPABASE_ANON_KEY = ""   // anon key (pública)
+    private val BUCKET = ""
 
 
     private var nuevaFotoUri: Uri?= null
