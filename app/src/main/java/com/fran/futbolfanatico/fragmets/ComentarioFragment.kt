@@ -42,6 +42,7 @@ class ComentarioFragment : Fragment() {
     private lateinit var adapter: ComentarioAdapter
     private var listener: ListenerRegistration? = null
     private var idPublicacion: String? = null
+    private val userCache = mutableMapOf<String, Usuario>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,7 +137,20 @@ class ComentarioFragment : Fragment() {
 
                 try {
                     val publicacion = Publicacion.desdeDoc(doc)
-                    mostrarPublicacion(publicacion)
+                    db.collection("usuarios").document(publicacion.id_usuario)
+                        .get()
+                        .addOnSuccessListener { userDoc ->
+                            userCache[publicacion.id_usuario] = Usuario(
+                                id = userDoc.id,
+                                nombre_usuario = userDoc.getString("nombre_usuario") ?: "usuario",
+                                nombre_mostrado = userDoc.getString("nombre_mostrado") ?: "",
+                                foto_url = userDoc.getString("foto_url"),
+                                email = userDoc.getString("email") ?: "",
+                                nombre_usuario_lower = userDoc.getString("nombre_usuario_lower") ?: ""
+                            )
+                            mostrarPublicacion(publicacion)
+                        }
+                        .addOnFailureListener { mostrarPublicacion(publicacion) }
                 } catch (e: Exception) {
                     Toast.makeText(requireContext(), "Error al cargar publicación", Toast.LENGTH_SHORT).show()
                 }
@@ -153,7 +167,7 @@ class ComentarioFragment : Fragment() {
         //
         viewHolder.bind(
             publicacion = publicacion,
-            userCache = mutableMapOf(), // Cache vacío (no importa para 1 sola publicación)
+            userCache = userCache, // Cache vacío (no importa para 1 sola publicación)
             onLikeClick = { alternarMeGustas(it) },
             onCommentClick = { /* Ya estamos en comentarios, deshabilitar */ },
             onAvatarClick = { uid ->
@@ -252,6 +266,7 @@ class ComentarioFragment : Fragment() {
     override fun onDestroyView() {
         listener?.remove()
         adapter.clearCache()
+        userCache.clear()
         _binding = null
         super.onDestroyView()
     }
